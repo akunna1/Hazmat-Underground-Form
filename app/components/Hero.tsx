@@ -44,13 +44,13 @@ export default function Hero() {
         {/* Master Contractor */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
-          <h2 className="text-lg font-semibold text-gray-700 mb-4">
+          <h2 className="text-center md:text-left text-lg font-semibold text-gray-700 mb-4">
             Master Contractor
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
             <input name="masterCompanyName"  type="text" required placeholder="Company Name" className="input"/>
-            <input name="masterCompanyPhone" type="text" required placeholder="Phone Number" className="input"/>
+            <input name="masterCompanyPhone" type="tel" required placeholder="Phone Number" className="input"/>
             <input name="masterCompanyEmail" type="email" required placeholder="Email Address" className="input"/>
             <input name="masterCompanyWebsite" type="url" placeholder="Website" className="input"/>
           </div>
@@ -59,7 +59,7 @@ export default function Hero() {
             <input name="masterCompanyStreet"  type="text" required placeholder="Street Address" className="input"/>
             <input name="masterCompanyCity" type="text" required placeholder="City" className="input"/>
             <input name="masterCompanyState" type="text" required placeholder="State" maxLength={2} className="input"/>
-            <input name="masterCompanyZip" type="text" required placeholder="Zip Code" className="input"/>
+            <input name="masterCompanyZip" type="text" required placeholder="Zip Code" inputMode="numeric" className="input"/>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -77,14 +77,14 @@ export default function Hero() {
         {/* Master Contractor Point of Contact */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
-          <h2 className="text-lg font-semibold text-gray-700 mb-4">
+          <h2 className="text-center md:text-left text-lg font-semibold text-gray-700 mb-4">
             Master Contractor Point of Contact
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-2 gap-4">
             <input name="masterContactName"  type="text" required placeholder="Full Name" className="input"/>
             <input name="masterContactPosition" type="text" required placeholder="Position" className="input"/>
-            <input name="masterContactPhone" type="text" required placeholder="Phone Number" className="input"/>
+            <input name="masterContactPhone" type="tel" required placeholder="Phone Number" className="input"/>
             <input name="masterContactEmail" type="email" required placeholder="Email Address" className="input"/>
           </div>
 
@@ -94,14 +94,14 @@ export default function Hero() {
         {/* Master Contractor Supervisor */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
-          <h2 className="text-lg font-semibold text-gray-700 mb-4">
+          <h2 className="text-center md:text-lefttext-lg font-semibold text-gray-700 mb-4">
             Master Contractor Supervisor
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-2 gap-4">
             <input name="masterSupervisorName"  type="text" required placeholder="Full Name" className="input"/>
             <input name="masterSupervisorPosition" type="text" required placeholder="Position" className="input"/>
-            <input name="masterSupervisorPhone" type="text" required placeholder="Phone Number" className="input"/>
+            <input name="masterSupervisorPhone" type="tel" required placeholder="Phone Number" className="input"/>
             <input name="masterSupervisorEmail" type="email" required placeholder="Email Address" className="input"/>
           </div>
 
@@ -111,13 +111,13 @@ export default function Hero() {
         {/* Sub-Contractor */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
-          <h2 className="text-lg font-semibold text-gray-700 mb-4">
+          <h2 className="text-center md:text-left text-lg font-semibold text-gray-700 mb-4">
             Sub-Contractor
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
             <input name="subCompanyName"  type="text" required placeholder="Company Name" className="input"/>
-            <input name="subCompanyPhone" type="text" required placeholder="Phone Number" className="input"/>
+            <input name="subCompanyPhone" type="tel" required placeholder="Phone Number" className="input"/>
             <input name="subCompanyEmail" type="email" required placeholder="Email Address" className="input"/>
             <input name="subCompanyWebsite" type="url" placeholder="Website" className="input"/>
           </div>
@@ -126,7 +126,7 @@ export default function Hero() {
             <input name="subCompanyStreet"  type="text" required placeholder="Street Address" className="input"/>
             <input name="subCompanyCity" type="text" required placeholder="City" className="input"/>
             <input name="subCompanyState" type="text" required placeholder="State" maxLength={2} className="input"/>
-            <input name="subCompanyZip" type="text" required placeholder="Zip Code" className="input"/>
+            <input name="subCompanyZip" type="text" required placeholder="Zip Code" inputMode="numeric" className="input"/>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -141,13 +141,47 @@ export default function Hero() {
 
         </div>
 
+        {/* Sub-Contractor Point of Contact on Scene*/}
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
+
+          <h2 className="text-center md:text-left text-lg font-semibold text-gray-700 mb-4">
+            Sub-Contractor Point of Contact on Scene
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <input name="subContactName"  type="text" required placeholder="Full Name" className="input"/>
+            <input name="subContactPosition" type="text" required placeholder="Position" className="input"/>
+            <input name="subContactPhone" type="tel" required placeholder="Phone Number" className="input"/>
+            <input name="subContactEmail" type="email" required placeholder="Email Address" className="input"/>
+          </div>
+
+        </div>
+
+        
+        {/* Sub-Contractor Supervisor */}
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
+
+          <h2 className="text-center md:text-lefttext-lg font-semibold text-gray-700 mb-4">
+            Sub-Contractor Supervisor
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <input name="subSupervisorName"  type="text" required placeholder="Full Name" className="input"/>
+            <input name="subSupervisorPosition" type="text" required placeholder="Position" className="input"/>
+            <input name="subSupervisorPhone" type="tel" required placeholder="Phone Number" className="input"/>
+            <input name="subSupervisorEmail" type="email" required placeholder="Email Address" className="input"/>
+          </div>
+
+        </div>
+
+
 
         {/* Submit */}
         <div className="text-center pt-6">
 
           <button
             type="submit"
-            className="px-8 py-3 rounded-xl bg-linear-to-r from-red-600 to-red-700 text-white text-lg font-semibold shadow-lg hover:shadow-xl hover:scale-110 active:scale-110 transition"
+            className="px-8 py-3 rounded-xl bg-linear-to-r from-red-600 to-red-700 text-white hover:text-gray-300 active:text-gray-300 text-lg font-semibold shadow-lg hover:shadow-xl hover:scale-110 active:scale-110 transition"
           >
             Submit
           </button>
