@@ -44,7 +44,7 @@ export default function Hero() {
         {/* Master Contractor */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
-          <h2 className="text-center md:text-left text-lg font-semibold text-gray-700 mb-4">
+          <h2 className="text-left text-lg font-semibold text-gray-700 mb-4">
             Master Contractor
           </h2>
           
@@ -77,7 +77,7 @@ export default function Hero() {
         {/* Master Contractor Point of Contact */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
-          <h2 className="text-center md:text-left text-lg font-semibold text-gray-700 mb-4">
+          <h2 className="text-left text-lg font-semibold text-gray-700 mb-4">
             Master Contractor Point of Contact
           </h2>
 
@@ -94,7 +94,7 @@ export default function Hero() {
         {/* Master Contractor Supervisor */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
-          <h2 className="text-center md:text-lefttext-lg font-semibold text-gray-700 mb-4">
+          <h2 className="text-lefttext-lg font-semibold text-gray-700 mb-4">
             Master Contractor Supervisor
           </h2>
 
@@ -111,7 +111,7 @@ export default function Hero() {
         {/* Sub-Contractor */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
-          <h2 className="text-center md:text-left text-lg font-semibold text-gray-700 mb-4">
+          <h2 className="text-left text-lg font-semibold text-gray-700 mb-4">
             Sub-Contractor
           </h2>
           
@@ -144,7 +144,7 @@ export default function Hero() {
         {/* Sub-Contractor Point of Contact on Scene*/}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
-          <h2 className="text-center md:text-left text-lg font-semibold text-gray-700 mb-4">
+          <h2 className="text-left text-lg font-semibold text-gray-700 mb-4">
             Sub-Contractor Point of Contact on Scene
           </h2>
 
@@ -161,7 +161,7 @@ export default function Hero() {
         {/* Sub-Contractor Supervisor */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
-          <h2 className="text-center md:text-lefttext-lg font-semibold text-gray-700 mb-4">
+          <h2 className="text-lefttext-lg font-semibold text-gray-700 mb-4">
             Sub-Contractor Supervisor
           </h2>
 
