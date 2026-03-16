@@ -2,11 +2,12 @@
 
 export default function Hero() {
 
+  // Form submission handler
   const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     const form = e.currentTarget;
 
+    // Converting all form inputs into a plain object for submission
     const formData: any = Object.fromEntries(
       new FormData(e.currentTarget)
     );
@@ -33,45 +34,39 @@ export default function Hero() {
   return (
     <section className="w-full bg-gray-100 py-10 rounded-b-xl shadow-lg">
 
+      {/* Form */}
       <form
         name="hazmatBoringIncidentForm"
         onSubmit={handleSubmit}
-        className="max-w-6xl mx-auto px-6 space-y-8"
+        className="max-w-6xl mx-auto px-4 space-y-8"
       >
 
-        {/* MASTER CONTRACTOR */}
+        {/* Master Contractor Section */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
           <h2 className="text-lg font-semibold text-gray-700 mb-4">
             Master Contractor
           </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-            <input name="masterCompanyName" placeholder="Company Name"
-              className="input"/>
-
-            <input name="masterCompanyAddress" placeholder="Company Address"
-              className="input"/>
-
-            <input name="masterCompanyPhone" placeholder="Company Phone"
-              className="input"/>
-
-            <input name="masterCompanyEmail" placeholder="Company Email"
-              className="input"/>
-
-            <input name="masterCompanyWebsite" placeholder="Company Website"
-              className="input"/>
-
-            <input name="masterInsuranceCompany" placeholder="Insurance Company"
-              className="input"/>
-
-            <input name="masterInsurancePolicyNumber" placeholder="Insurance Policy Number"
-              className="input"/>
-
-            <input name="workBeingPerformedFor" placeholder="Work Being Performed For (Google, AT&T, etc.)"
-              className="input"/>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            <input name="masterCompanyName"  type="text" required placeholder="Name" className="input"/>
+            <input name="masterCompanyPhone" type="text" required placeholder="Phone Number" className="input"/>
+            <input name="masterCompanyEmail" type="email" required placeholder="Email Address" className="input"/>
+            <input name="masterCompanyWebsite" type="url" required placeholder="Website" className="input"/>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            <input name="masterCompanyStreet"  type="text" required placeholder="Street Address" className="input"/>
+            <input name="masterCompanyCity" type="text" required placeholder="City" className="input"/>
+            <input name="masterCompanyState" type="text" required placeholder="State" maxLength={2} className="input"/>
+            <input name="masterCompanyZip" type="text" required placeholder="Zip Code" className="input"/>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <input name="masterInsuranceCompany"  type="text" required placeholder="Insurance Company" className="input"/>
+            <input name="masterInsurancePolicy" type="text" required placeholder="Policy Number" className="input"/>
+          </div>
+
         </div>
 
 
