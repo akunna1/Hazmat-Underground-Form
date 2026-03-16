@@ -1,105 +1,139 @@
+"use client";
+
 export default function Hero() {
+
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+
+    const formData: any = Object.fromEntries(
+      new FormData(e.currentTarget)
+    );
+
+    try {
+      const res = await fetch("/api/formSubmission", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+
+      if (res.ok) {
+        alert("Submission Received! 😃");
+        form.reset();
+      } else {
+        alert("Submission Failed! 😭");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Submission Error. 😕");
+    }
+  };
+
   return (
-    <section className="w-full border-b bg-gray-100">
-      <div className="max-w-6xl mx-auto px-6 py-10">
+    <section className="w-full bg-gray-100 py-10 rounded-b-xl shadow-lg">
 
-        <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <form
+        name="hazmatBoringIncidentForm"
+        onSubmit={handleSubmit}
+        className="max-w-6xl mx-auto px-6 space-y-8"
+      >
 
-          {/* Incident Date */}
-          <div className="flex flex-col">
-            <label className="text-sm font-medium text-gray-700">
-              Incident Date
-            </label>
-            <input
-              type="date"
-              className="mt-1 p-2 border rounded-md"
-            />
+        {/* MASTER CONTRACTOR */}
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
+
+          <h2 className="text-lg font-semibold text-gray-700 mb-4">
+            Master Contractor
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <input name="masterCompanyName" placeholder="Company Name"
+              className="input"/>
+
+            <input name="masterCompanyAddress" placeholder="Company Address"
+              className="input"/>
+
+            <input name="masterCompanyPhone" placeholder="Company Phone"
+              className="input"/>
+
+            <input name="masterCompanyEmail" placeholder="Company Email"
+              className="input"/>
+
+            <input name="masterCompanyWebsite" placeholder="Company Website"
+              className="input"/>
+
+            <input name="masterInsuranceCompany" placeholder="Insurance Company"
+              className="input"/>
+
+            <input name="masterInsurancePolicyNumber" placeholder="Insurance Policy Number"
+              className="input"/>
+
+            <input name="workBeingPerformedFor" placeholder="Work Being Performed For (Google, AT&T, etc.)"
+              className="input"/>
           </div>
+        </div>
 
-          {/* Incident Time */}
-          <div className="flex flex-col">
-            <label className="text-sm font-medium text-gray-700">
-              Incident Time
-            </label>
-            <input
-              type="time"
-              className="mt-1 p-2 border rounded-md"
-            />
+
+        {/* MASTER CONTRACTOR POINT OF CONTACT */}
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
+
+          <h2 className="text-lg font-semibold text-gray-700 mb-4">
+            Master Contractor Point of Contact
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-4">
+
+            <input name="masterContactName" placeholder="Full Name" className="input"/>
+
+            <input name="masterContactPosition" placeholder="Position" className="input"/>
+
+            <input name="masterContactPhone" placeholder="Phone #" className="input"/>
+
+            <input name="masterContactEmail" placeholder="Email Address" className="input"/>
+
           </div>
+        </div>
 
-          {/* Location */}
-          <div className="flex flex-col md:col-span-2">
-            <label className="text-sm font-medium text-gray-700">
-              Incident Location
-            </label>
-            <input
-              type="text"
-              placeholder="Street address or intersection"
-              className="mt-1 p-2 border rounded-md"
-            />
+
+        {/* SUB CONTRACTOR */}
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
+
+          <h2 className="text-lg font-semibold text-gray-700 mb-4">
+            Sub-Contractor
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-4">
+
+            <input name="subCompanyName" placeholder="Company Name" className="input"/>
+
+            <input name="subCompanyAddress" placeholder="Company Address" className="input"/>
+
+            <input name="subCompanyPhone" placeholder="Company Phone" className="input"/>
+
+            <input name="subCompanyEmail" placeholder="Company Email" className="input"/>
+
+            <input name="permitNumber" placeholder="Permit Number" className="input"/>
+
+            <input name="permitAgency" placeholder="Permit Issuing Agency" className="input"/>
+
           </div>
+        </div>
 
-          {/* Boring Company */}
-          <div className="flex flex-col">
-            <label className="text-sm font-medium text-gray-700">
-              Boring Company
-            </label>
-            <input
-              type="text"
-              placeholder="Company name"
-              className="mt-1 p-2 border rounded-md"
-            />
-          </div>
 
-          {/* Fire Unit */}
-          <div className="flex flex-col">
-            <label className="text-sm font-medium text-gray-700">
-              Fire Unit Responding
-            </label>
-            <input
-              type="text"
-              placeholder="Engine / Ladder / Battalion"
-              className="mt-1 p-2 border rounded-md"
-            />
-          </div>
+        {/* Submit */}
+        <div className="text-center pt-6">
 
-          {/* Material Released */}
-          <div className="flex flex-col md:col-span-2">
-            <label className="text-sm font-medium text-gray-700">
-              Suspected Material Released
-            </label>
-            <input
-              type="text"
-              placeholder="Gas, fuel, chemical, unknown..."
-              className="mt-1 p-2 border rounded-md"
-            />
-          </div>
+          <button
+            type="submit"
+            className="px-8 py-3 rounded-xl bg-linear-to-r from-red-600 to-red-700 text-white text-lg font-semibold shadow-lg hover:shadow-xl hover:scale-110 active:scale-110 transition"
+          >
+            Submit
+          </button>
 
-          {/* Description */}
-          <div className="flex flex-col md:col-span-2">
-            <label className="text-sm font-medium text-gray-700">
-              Incident Description
-            </label>
-            <textarea
-              rows={4}
-              placeholder="Describe what happened..."
-              className="mt-1 p-2 border rounded-md"
-            />
-          </div>
+        </div>
 
-          {/* Submit */}
-          <div className="md:col-span-2">
-            <button
-              type="submit"
-              className="bg-red-700 text-white px-6 py-2 rounded-md hover:bg-red-800"
-            >
-              Submit Report
-            </button>
-          </div>
-
-        </form>
-
-      </div>
+      </form>
     </section>
   );
 }
