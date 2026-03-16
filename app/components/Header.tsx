@@ -2,21 +2,23 @@
 
 export default function Header() {
   return (
-    <header className="flex items-center gap-4 mb-2 ml-3">
+    <header className="flex items-center justify-between px-6 py-4 border-b bg-gray-100">
       
-      {/* Logo */}
-      <img
-        src="photos/DFD_Logo2.png"
-        alt="Fire Department Logo"
-        className="h-24 sm:h-28 md:h-36 w-auto object-contain"
-      />
+      <div className="flex items-center gap-4">
+        <img
+          src="/photos/DFD_Logo2.png"
+          alt="DFD Logo"
+          className="h-24 sm:h-28 md:h-36 w-auto object-contain"
+        />
 
-      {/* Title */}
-      <div className="leading-tight">
-        <h5 className="text-red-700 text-lg sm:text-xl md:text-3xl font-serif italic">
-          <div>Hazmat Underground</div>
-          <div>Boring Incidents</div>
-        </h5>
+        <div>
+          <h1 className="text-2xl font-semibold text-red-700">
+            Durham Fire Department
+          </h1>
+          <p className="text-sm text-gray-600">
+            HazMat Underground Boring Incident Form
+          </p>
+        </div>
       </div>
 
     </header>
