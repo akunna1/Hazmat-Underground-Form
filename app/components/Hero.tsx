@@ -41,7 +41,7 @@ export default function Hero() {
         className="max-w-6xl mx-auto px-4 space-y-8"
       >
 
-        {/* Master Contractor Section */}
+        {/* Master Contractor */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
           <h2 className="text-lg font-semibold text-gray-700 mb-4">
@@ -49,10 +49,10 @@ export default function Hero() {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-            <input name="masterCompanyName"  type="text" required placeholder="Name" className="input"/>
+            <input name="masterCompanyName"  type="text" required placeholder="Company Name" className="input"/>
             <input name="masterCompanyPhone" type="text" required placeholder="Phone Number" className="input"/>
             <input name="masterCompanyEmail" type="email" required placeholder="Email Address" className="input"/>
-            <input name="masterCompanyWebsite" type="url" required placeholder="Website" className="input"/>
+            <input name="masterCompanyWebsite" type="url" placeholder="Website" className="input"/>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
@@ -64,55 +64,81 @@ export default function Hero() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <input name="masterInsuranceCompany"  type="text" required placeholder="Insurance Company" className="input"/>
-            <input name="masterInsurancePolicy" type="text" required placeholder="Policy Number" className="input"/>
+            <input name="masterInsurancePolicy" type="text" required placeholder="Insurance Policy Number" className="input"/>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4">
+            <input name="masterClient" type="text" required placeholder="Client Company (Google, AT&T, etc.)" className="input"/>
           </div>
 
         </div>
 
 
-        {/* MASTER CONTRACTOR POINT OF CONTACT */}
+        {/* Master Contractor Point of Contact */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
           <h2 className="text-lg font-semibold text-gray-700 mb-4">
             Master Contractor Point of Contact
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-4">
-
-            <input name="masterContactName" placeholder="Full Name" className="input"/>
-
-            <input name="masterContactPosition" placeholder="Position" className="input"/>
-
-            <input name="masterContactPhone" placeholder="Phone #" className="input"/>
-
-            <input name="masterContactEmail" placeholder="Email Address" className="input"/>
-
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <input name="masterContactName"  type="text" required placeholder="Full Name" className="input"/>
+            <input name="masterContactPosition" type="text" required placeholder="Position" className="input"/>
+            <input name="masterContactPhone" type="text" required placeholder="Phone Number" className="input"/>
+            <input name="masterContactEmail" type="email" required placeholder="Email Address" className="input"/>
           </div>
+
+        </div>
+
+        
+        {/* Master Contractor Supervisor */}
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
+
+          <h2 className="text-lg font-semibold text-gray-700 mb-4">
+            Master Contractor Supervisor
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <input name="masterSupervisorName"  type="text" required placeholder="Full Name" className="input"/>
+            <input name="masterSupervisorPosition" type="text" required placeholder="Position" className="input"/>
+            <input name="masterSupervisorPhone" type="text" required placeholder="Phone Number" className="input"/>
+            <input name="masterSupervisorEmail" type="email" required placeholder="Email Address" className="input"/>
+          </div>
+
         </div>
 
 
-        {/* SUB CONTRACTOR */}
+        {/* Sub-Contractor */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
           <h2 className="text-lg font-semibold text-gray-700 mb-4">
             Sub-Contractor
           </h2>
-
-          <div className="grid md:grid-cols-2 gap-4">
-
-            <input name="subCompanyName" placeholder="Company Name" className="input"/>
-
-            <input name="subCompanyAddress" placeholder="Company Address" className="input"/>
-
-            <input name="subCompanyPhone" placeholder="Company Phone" className="input"/>
-
-            <input name="subCompanyEmail" placeholder="Company Email" className="input"/>
-
-            <input name="permitNumber" placeholder="Permit Number" className="input"/>
-
-            <input name="permitAgency" placeholder="Permit Issuing Agency" className="input"/>
-
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            <input name="subCompanyName"  type="text" required placeholder="Company Name" className="input"/>
+            <input name="subCompanyPhone" type="text" required placeholder="Phone Number" className="input"/>
+            <input name="subCompanyEmail" type="email" required placeholder="Email Address" className="input"/>
+            <input name="subCompanyWebsite" type="url" placeholder="Website" className="input"/>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            <input name="subCompanyStreet"  type="text" required placeholder="Street Address" className="input"/>
+            <input name="subCompanyCity" type="text" required placeholder="City" className="input"/>
+            <input name="subCompanyState" type="text" required placeholder="State" maxLength={2} className="input"/>
+            <input name="subCompanyZip" type="text" required placeholder="Zip Code" className="input"/>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <input name="subInsuranceCompany"  type="text" required placeholder="Insurance Company" className="input"/>
+            <input name="subInsurancePolicy" type="text" required placeholder="Insurance Policy Number" className="input"/>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input name="permitNumber" type="text" required placeholder="Permit Number" className="input"/>
+            <input name="permitIssuingAgency" type="text" required placeholder="Permit Issuing Agency" className="input"/>
+          </div>
+
         </div>
 
 
