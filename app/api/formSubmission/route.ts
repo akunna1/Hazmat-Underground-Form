@@ -93,7 +93,7 @@ export async function POST(req: Request) {
 
 
     // Master Contractor
-    drawSubtitle('Master Contractor:')
+    drawSubtitle('Master Contractor')
     drawLine('Company Name', data.masterCompanyName)
     drawLine('Phone', data.masterCompanyPhone)
     drawLine('Email', data.masterCompanyEmail)
@@ -110,7 +110,7 @@ export async function POST(req: Request) {
 
   
     // Master Contractor Point of Contact
-    drawSubtitle('Master Contractor Point of Contact:')
+    drawSubtitle('Master Contractor Point of Contact')
     drawLine('Name', data.masterContactName)
     drawLine('Position', data.masterContactPosition)
     drawLine('Phone', data.masterContactPhone)
@@ -120,7 +120,7 @@ export async function POST(req: Request) {
 
   
     // Master Contractor Supervisor
-    drawSubtitle('Master Contractor Supervisor:')
+    drawSubtitle('Master Contractor Supervisor')
     drawLine('Name', data.masterSupervisorName)
     drawLine('Position', data.masterSupervisorPosition)
     drawLine('Phone', data.masterSupervisorPhone)
@@ -130,7 +130,7 @@ export async function POST(req: Request) {
 
   
     // Sub-Contractor
-    drawSubtitle('Sub-Contractor:')
+    drawSubtitle('Sub-Contractor')
     drawLine('Company Name', data.subCompanyName)
     drawLine('Phone', data.subCompanyPhone)
     drawLine('Email', data.subCompanyEmail)
@@ -148,7 +148,7 @@ export async function POST(req: Request) {
 
   
     // Sub-Contractor Point of Contact on Scene
-    drawSubtitle('Sub-Contractor Point of Contact on Scene:')
+    drawSubtitle('Sub-Contractor Point of Contact on Scene')
     drawLine('Name', data.subContactName)
     drawLine('Position', data.subContactPosition)
     drawLine('Phone', data.subContactPhone)
@@ -158,7 +158,7 @@ export async function POST(req: Request) {
 
   
     // Sub-Contractor Supervisor
-    drawSubtitle('Sub-Contractor Supervisor:')
+    drawSubtitle('Sub-Contractor Supervisor')
     drawLine('Name', data.subSupervisorName)
     drawLine('Position', data.subSupervisorPosition)
     drawLine('Phone', data.subSupervisorPhone)
