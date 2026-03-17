@@ -170,7 +170,7 @@ export async function POST(req: Request) {
 
     // Creating a file name
     const safeName = (data.masterCompanyName || 'Unknown').replace(/\s+/g, '-')
-    const fileName = `hazmat-boring-${safeName}-${Date.now()}.pdf`
+    const fileName = `hazmat-underground-${safeName}-${Date.now()}.pdf`
 
     // Uploading to Supabase Storage
     const { error } = await supabaseServer.storage
