@@ -210,7 +210,7 @@ export async function POST(req: Request) {
         },
         body: JSON.stringify({
           to: "durhamfd.nc@gmail.com",
-          subject: "HazMat Underground Incident Form",
+          subject: "Durham Fire Forms",
           html: `
             <h2>HazMat Underground Incident Form Submission</h2>
             <p><strong>Master Contractor:</strong> ${data.masterCompanyName}</p>
