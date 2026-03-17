@@ -200,7 +200,7 @@ export default function Hero() {
 
 
         {/* Submit */}
-        <div className="text-center pt-6">
+        <div className="text-center pt-3">
 
           <button
             type="submit"
