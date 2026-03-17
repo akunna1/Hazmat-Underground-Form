@@ -2,7 +2,7 @@
 
 export default function Header() {
   return (
-    <header className="bg-red-700 shadow-lg rounded-t-xl">
+    <header className="bg-red-700 shadow-lg rounded-xl">
 
       <div className="max-w-6xl mx-auto px-6 py-2 flex items-center gap-2 text-white">
 
