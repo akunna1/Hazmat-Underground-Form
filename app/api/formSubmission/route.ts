@@ -201,7 +201,7 @@ export async function POST(req: Request) {
           to: "durhamfd.nc@gmail.com",
           subject: "HazMat Underground Incident Form",
           html: `
-            <h2>HazMat Underground Boring Incident Form Submission</h2>
+            <h2>HazMat Underground Incident Form Submission</h2>
             <p><strong>Master Contractor:</strong> ${data.masterCompanyName}</p>
             <p><strong>Client Company:</strong> ${data.masterClient}</p>
             <p><strong>Submitted On:</strong> ${new Date().toLocaleString()}</p>

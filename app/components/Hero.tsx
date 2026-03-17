@@ -36,9 +36,9 @@ export default function Hero() {
 
       {/* Form */}
       <form
-        name="hazmatBoringIncidentForm"
+        name="hazmatUndergroundIncidentForm"
         onSubmit={handleSubmit}
-        className="max-w-6xl mx-auto px-4 space-y-8"
+        className="max-w-7xl mx-auto px-4 space-y-8"
       >
 
         {/* Master Contractor */}
