@@ -14,11 +14,11 @@ export default function Header() {
 
         <div>
           <h1 className="text-3xl font-bold tracking-wide">
-            Durham Fire Department
+            HazMat Underground Incident Form
           </h1>
 
           <p className="text-red-100">
-            HazMat Underground Incident Form
+            Durham Fire Department
           </p>
         </div>
 
