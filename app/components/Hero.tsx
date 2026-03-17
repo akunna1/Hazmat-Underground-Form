@@ -41,6 +41,29 @@ export default function Hero() {
         className="max-w-360 mx-auto px-4 space-y-8"
       >
 
+        {/* Basic Incident Information */}
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
+
+          <h2 className="text-left text-lg font-semibold text-gray-700 mb-4">
+            Basic Incident Information
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <input name="incidentDate"  type="date" required placeholder="Incident Date" className="input"/>
+            <input name="incidentTime" type="time" required placeholder="Incident Time" className="input"/>
+            <input name="incidentNumber" type="text" required placeholder="Incident Number" className="input"/>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <input name="incidentStreet"  type="text" required placeholder="Street Address" className="input"/>
+            <input name="incidentCity" type="text" required placeholder="City" className="input"/>
+            <input name="incidentState" type="text" required placeholder="State" maxLength={2} className="input"/>
+            <input name="incidentZip" type="text" required placeholder="Zip Code" inputMode="numeric" className="input"/>
+          </div>
+
+        </div>
+
+
         {/* Master Contractor */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
@@ -94,7 +117,7 @@ export default function Hero() {
         {/* Master Contractor Supervisor */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
-          <h2 className="text-lefttext-lg font-semibold text-gray-700 mb-4">
+          <h2 className="text-left text-lg font-semibold text-gray-700 mb-4">
             Master Contractor Supervisor
           </h2>
 
@@ -161,7 +184,7 @@ export default function Hero() {
         {/* Sub-Contractor Supervisor */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
-          <h2 className="text-lefttext-lg font-semibold text-gray-700 mb-4">
+          <h2 className="text-left text-lg font-semibold text-gray-700 mb-4">
             Sub-Contractor Supervisor
           </h2>
 

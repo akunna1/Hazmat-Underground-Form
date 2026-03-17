@@ -91,6 +91,17 @@ export async function POST(req: Request) {
     })
     y -= 30
 
+    // Basic Incident Information
+    drawSubtitle('Basic Incident Information')
+    drawLine('Date', data.incidentDate)
+    drawLine('Time', data.incidentTime)
+    drawLine('Incident Number', data.incidentNumber)
+    drawLine('Street', data.incidentStreet)
+    drawLine('City', data.incidentCity)
+    drawLine('State', data.incidentState)
+    drawLine('Zip', data.incidentZip)
+
+    y -= 20
 
     // Master Contractor
     drawSubtitle('Master Contractor')
@@ -103,7 +114,7 @@ export async function POST(req: Request) {
     drawLine('State', data.masterCompanyState)
     drawLine('Zip', data.masterCompanyZip)
     drawLine('Insurance Company', data.masterInsuranceCompany)
-    drawLine('Insurance Policy', data.masterInsurancePolicy)
+    drawLine('Insurance Policy Number', data.masterInsurancePolicy)
     drawLine('Client Company', data.masterClient)
 
     y -= 20
@@ -111,7 +122,7 @@ export async function POST(req: Request) {
   
     // Master Contractor Point of Contact
     drawSubtitle('Master Contractor Point of Contact')
-    drawLine('Name', data.masterContactName)
+    drawLine('Full Name', data.masterContactName)
     drawLine('Position', data.masterContactPosition)
     drawLine('Phone', data.masterContactPhone)
     drawLine('Email', data.masterContactEmail)
@@ -121,7 +132,7 @@ export async function POST(req: Request) {
   
     // Master Contractor Supervisor
     drawSubtitle('Master Contractor Supervisor')
-    drawLine('Name', data.masterSupervisorName)
+    drawLine('Full Name', data.masterSupervisorName)
     drawLine('Position', data.masterSupervisorPosition)
     drawLine('Phone', data.masterSupervisorPhone)
     drawLine('Email', data.masterSupervisorEmail)
@@ -140,7 +151,7 @@ export async function POST(req: Request) {
     drawLine('State', data.subCompanyState)
     drawLine('Zip', data.subCompanyZip)
     drawLine('Insurance Company', data.subInsuranceCompany)
-    drawLine('Insurance Policy', data.subInsurancePolicy)
+    drawLine('Insurance Policy Number', data.subInsurancePolicy)
     drawLine('Permit Number', data.permitNumber)
     drawLine('Permit Issuing Agency', data.permitIssuingAgency)
 
@@ -149,7 +160,7 @@ export async function POST(req: Request) {
   
     // Sub-Contractor Point of Contact on Scene
     drawSubtitle('Sub-Contractor Point of Contact on Scene')
-    drawLine('Name', data.subContactName)
+    drawLine('Full Name', data.subContactName)
     drawLine('Position', data.subContactPosition)
     drawLine('Phone', data.subContactPhone)
     drawLine('Email', data.subContactEmail)
@@ -159,7 +170,7 @@ export async function POST(req: Request) {
   
     // Sub-Contractor Supervisor
     drawSubtitle('Sub-Contractor Supervisor')
-    drawLine('Name', data.subSupervisorName)
+    drawLine('Full Name', data.subSupervisorName)
     drawLine('Position', data.subSupervisorPosition)
     drawLine('Phone', data.subSupervisorPhone)
     drawLine('Email', data.subSupervisorEmail)
