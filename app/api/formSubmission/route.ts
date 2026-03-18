@@ -199,6 +199,14 @@ export async function POST(req: Request) {
 
     const publicUrl = publicUrlData.publicUrl
 
+    // Formatting submission datetime in Eastern Time
+    const submittedOn = new Date().toLocaleString("en-US", {
+      timeZone: "America/New_York",
+      dateStyle: "long",
+      timeStyle: "short",
+      timeZoneName: "short"
+    })
+
     // Sending email notification
     const emailRes = await fetch(
       "https://zllpgqwytjlstygdnjvd.supabase.co/functions/v1/send-email",
@@ -215,7 +223,7 @@ export async function POST(req: Request) {
             <h2>New HazMat Underground Incident Form Submission</h2>
             <p><strong>Master Contractor:</strong> ${data.masterCompanyName}</p>
             <p><strong>Client Company:</strong> ${data.masterClient}</p>
-            <p><strong>Submitted On:</strong> ${new Date().toLocaleString()}</p>
+             <p><strong>Submitted On:</strong> ${submittedOn}</p>
             <p><a href="${publicUrl}">View PDF</a></p>
           `,
         }),
