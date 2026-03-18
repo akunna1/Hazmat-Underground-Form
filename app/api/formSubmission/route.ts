@@ -202,8 +202,12 @@ export async function POST(req: Request) {
     // Formatting submission datetime in Eastern Time
     const submittedOn = new Date().toLocaleString("en-US", {
       timeZone: "America/New_York",
-      dateStyle: "long",
-      timeStyle: "short",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
       timeZoneName: "short"
     })
 
