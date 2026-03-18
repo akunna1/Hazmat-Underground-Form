@@ -227,7 +227,7 @@ export async function POST(req: Request) {
             <h2>New HazMat Underground Incident Form Submission</h2>
             <p><strong>Master Contractor:</strong> ${data.masterCompanyName}</p>
             <p><strong>Client Company:</strong> ${data.masterClient}</p>
-             <p><strong>Submitted On:</strong> ${submittedOn}</p>
+            <p><strong>Submitted On:</strong> ${submittedOn}</p>
             <p><a href="${publicUrl}">View PDF</a></p>
           `,
         }),
