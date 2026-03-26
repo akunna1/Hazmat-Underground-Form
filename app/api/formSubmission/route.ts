@@ -228,6 +228,7 @@ export async function POST(req: Request) {
             <p><strong>Master Contractor:</strong> ${data.masterCompanyName}</p>
             <p><strong>Client Company:</strong> ${data.masterClient}</p>
             <p><strong>Submitted On:</strong> ${submittedOn}</p>
+            <p>The full record can be accessed through the link below.</p>
             <p><a href="${publicUrl}">View PDF</a></p>
           `,
         }),

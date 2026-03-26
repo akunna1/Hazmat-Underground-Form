@@ -1,17 +1,24 @@
 "use client";
 
+import React, { useState} from "react";
+
 export default function Hero() {
+  const [loading, setLoading] = useState(false);
 
   // Form submission handler
   const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (loading) return; // prevents spam clicking
+
     const form = e.currentTarget;
 
-    // Converting all form inputs into a plain object for submission
-    const formData: any = Object.fromEntries(
-      new FormData(e.currentTarget)
-    );
+    setLoading(true); // start loading
 
+    //Turning the form fields into a simple object and telling TS that all keys and values are strings
+    const formData = Object.fromEntries(new FormData(form)) as Record<string, string>;
+
+    // Sending data to API route
     try {
       const res = await fetch("/api/formSubmission", {
         method: "POST",
@@ -29,17 +36,16 @@ export default function Hero() {
       console.error(err);
       alert("Network Error! 😵");
     }
+    finally {
+      setLoading(false); // always stop loading
+    }
   };
 
   return (
     <section className="w-full bg-gray-100 py-10 rounded-b-xl shadow-lg">
 
       {/* Form */}
-      <form
-        name="hazmatUndergroundIncidentForm"
-        onSubmit={handleSubmit}
-        className="max-w-360 mx-auto px-4 space-y-8"
-      >
+      <form onSubmit={handleSubmit} className="max-w-360 mx-auto px-4 space-y-8">
 
         {/* Basic Incident Information */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
@@ -201,14 +207,13 @@ export default function Hero() {
 
         {/* Submit */}
         <div className="text-center pt-3">
-
           <button
             type="submit"
+            disabled={loading}
             className="px-8 py-3 rounded-xl bg-linear-to-r from-red-600 to-red-700 text-white hover:text-gray-300 active:text-gray-300 text-lg font-semibold shadow-lg hover:shadow-xl hover:scale-110 active:scale-110 transition"
           >
-            Submit
+            {loading ? "Submitting..." : "Submit"}
           </button>
-
         </div>
 
       </form>
