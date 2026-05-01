@@ -13,7 +13,7 @@ export default function Header() {
         />
 
         <div>
-          <h1 className="text-3xl font-bold uppercase">
+          <h1 className="text-3xl font-bold">
             HazMat Underground Incident Form
           </h1>
 
