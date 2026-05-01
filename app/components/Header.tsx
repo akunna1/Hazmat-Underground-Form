@@ -13,11 +13,11 @@ export default function Header() {
         />
 
         <div>
-          <h1 className="text-3xl font-bold tracking-wide">
+          <h1 className="text-3xl font-bold">
             HazMat Underground Incident Form
           </h1>
 
-          <p className="text-red-100">
+          <p className="text-red-100 font-semibold">
             Durham Fire Department
           </p>
         </div>
