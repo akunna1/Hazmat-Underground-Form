@@ -16,7 +16,7 @@ export default function Footer() {
             <p>Hazardous Materials Unit</p>
           </div>
 
-          <div className="text-gray-500 text-sm mt-4 md:mt-0 text-right">
+          <div className="text-gray-500 text-sm mt-4 md:mt-0 text-center md:text-right">
             <p>Internal Use Only</p>
             <p>© {year} City of Durham</p>
           </div>
