@@ -47,6 +47,24 @@ export default function Hero() {
       {/* Form */}
       <form onSubmit={handleSubmit} className="max-w-360 mx-auto px-4 space-y-8">
 
+        {/* Submitted By*/}
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
+
+          <h2 className="text-left text-lg font-semibold text-gray-700 mb-4">
+            Form Submitted By
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            <input name="submittedByName"  type="text" placeholder="Full Name" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="submittedByPhone" type="tel" placeholder="Phone Number" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="submittedByEmail" type="email" placeholder="Email Address" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="submittedByRank" type="text" placeholder="Employee Rank" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="submittedByDate" type="date" placeholder="Date" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="submittedByTime" type="time" placeholder="Time" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+          </div>
+
+        </div>
+
         {/* Basic Incident Information */}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
 
@@ -202,26 +220,6 @@ export default function Hero() {
           </div>
 
         </div>
-
-      
-      {/* Submitted By*/}
-        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
-
-          <h2 className="text-left text-lg font-semibold text-gray-700 mb-4">
-            Form Submitted By
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-4">
-            <input name="SubmittedByName"  type="text" placeholder="Full Name" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
-            <input name="SubmittedByPhone" type="tel" placeholder="Phone Number" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
-            <input name="SubmittedByEmail" type="email" placeholder="Email Address" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
-            <input name="SubmittedByRank" type="text" placeholder="Employee Rank" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
-            <input name="SubmittedByDate" type="date" placeholder="Date" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
-            <input name="SubmittedByTime" type="time" placeholder="Time" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
-          </div>
-
-        </div>
-
 
         {/* Submit Button */}
         <div className="text-center pt-3">

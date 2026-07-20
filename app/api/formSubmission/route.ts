@@ -238,9 +238,9 @@ export async function POST(req: Request) {
           subject: "Durham Fire Forms",
           html: `
             <h2>New HazMat Underground Incident Form Submission</h2>
-            <p><strong>Submitted By:</strong> ${data.SubmittedByName}</p>
-            <p><strong>Email:</strong> ${data.SubmittedByEmail}</p>
-            <p><strong>Employee Rank:</strong> ${data.SubmittedByRank}</p>
+            <p><strong>Submitted By:</strong> ${data.submittedByName}</p>
+            <p><strong>Email:</strong> ${data.submittedByEmail}</p>
+            <p><strong>Employee Rank:</strong> ${data.submittedByRank}</p>
             <p><strong>Master Contractor:</strong> ${data.masterCompanyName}</p>
             <p><strong>Client Company:</strong> ${data.masterClient}</p>
             <p><strong>Submitted On:</strong> ${submittedOn}</p>
