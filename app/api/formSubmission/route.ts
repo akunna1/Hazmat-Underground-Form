@@ -175,6 +175,19 @@ export async function POST(req: Request) {
     drawLine('Phone', data.subSupervisorPhone)
     drawLine('Email', data.subSupervisorEmail)
 
+    y -= 20
+
+    // Submitted By
+    drawSubtitle('Form Submitted By')
+    drawLine('Full Name', data.SubmittedByName)
+    drawLine('Phone', data.SubmittedByPhone)
+    drawLine('Email', data.SubmittedByEmail)
+    drawLine('Employee Rank', data.SubmittedByRank)
+    drawLine('Date', data.SubmittedByDate)
+    drawLine('Time', data.SubmittedByTime)
+
+    y -= 20
+
     // Converting PDF to bytes
     const pdfBytes = await pdfDoc.save()
     const buffer = Buffer.from(pdfBytes)
