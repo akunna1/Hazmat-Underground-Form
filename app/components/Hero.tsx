@@ -78,7 +78,7 @@ export default function Hero() {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-            <input name="masterCompanyName"  type="text" placeholder="Company Name" className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="masterCompanyName"  type="text" placeholder="Company Name" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
             <input name="masterCompanyPhone" type="tel" placeholder="Phone Number" className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
             <input name="masterCompanyEmail" type="email" placeholder="Email Address" className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
             <input name="masterCompanyWebsite" type="url" placeholder="Website" className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
@@ -97,7 +97,7 @@ export default function Hero() {
           </div>
 
           <div className="grid grid-cols-1 gap-4">
-            <input name="masterClient" type="text" placeholder="Client Company (Google, AT&T, etc.)" className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="masterClient" type="text" placeholder="Client Company (Google, AT&T, etc.)" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
           </div>
 
         </div>
@@ -223,7 +223,7 @@ export default function Hero() {
         </div>
 
 
-        {/* Submit */}
+        {/* Submit Button */}
         <div className="text-center pt-3">
           <button
             type="submit"
