@@ -111,9 +111,9 @@ export default function Hero() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-4">
-            <input name="masterContactName"  type="text" placeholder="Full Name" className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="masterContactName"  type="text" placeholder="Full Name" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
             <input name="masterContactPosition" type="text" placeholder="Position" className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
-            <input name="masterContactPhone" type="tel" placeholder="Phone Number" className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="masterContactPhone" type="tel" placeholder="Phone Number" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
             <input name="masterContactEmail" type="email" placeholder="Email Address" className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
           </div>
 
@@ -203,6 +203,24 @@ export default function Hero() {
 
         </div>
 
+      
+      {/* Submitted By*/}
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
+
+          <h2 className="text-left text-lg font-semibold text-gray-700 mb-4">
+            Form Submitted By
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            <input name="SubmittedByName"  type="text" placeholder="Full Name" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="SubmittedByPhone" type="tel" placeholder="Phone Number" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="SubmittedByEmail" type="email" placeholder="Email Address" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="SubmittedByEID" type="text" placeholder="Employee ID" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="SubmittedByDate" type="date" placeholder="Date" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <input name="SubmittedByTime" type="time" placeholder="Time" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+          </div>
+
+        </div>
 
 
         {/* Submit */}
