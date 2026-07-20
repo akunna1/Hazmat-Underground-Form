@@ -59,8 +59,8 @@ export default function Hero() {
             <input name="submittedByPhone" type="tel" placeholder="Phone Number" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
             <input name="submittedByEmail" type="email" placeholder="Email Address" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
             <input name="submittedByRank" type="text" placeholder="Employee Rank" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
-            <input name="submittedByDate" type="date" placeholder="Date" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
-            <input name="submittedByTime" type="time" placeholder="Time" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/>
+            <div className="flex"><input name="submittedByDate" type="date" placeholder="Date" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/></div>
+            <div className="flex"><input name="submittedByTime" type="time" placeholder="Time" required className="w-full px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring focus:ring-black focus:border-black transition duration-200"/></div>
           </div>
 
         </div>
