@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="bg-red-700 shadow-lg rounded-xl">
 
-      <div className="max-w-360 mx-auto px-4 py-2 flex items-center gap-2 text-white">
+      <div className="w-full mx-auto px-4 lg:px-6 2xl:px-8 py-2 flex items-center gap-2 text-white">
 
         <img
           src="/photos/DFD_Logo2.png"

@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="mt-16 pb-10">
 
-      <div className="max-w-360 mx-auto px-6">
+      <div className="w-full mx-auto px-6 lg:px-8 2xl:px-10">
 
         <div className="bg-white shadow-lg rounded-xl p-6 border border-gray-200 flex flex-col md:flex-row justify-between items-center">
 

@@ -45,7 +45,7 @@ export default function Hero() {
     <section className="w-full bg-gray-100 py-10 rounded-b-xl shadow-lg">
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className="max-w-360 mx-auto px-4 space-y-8">
+      <form onSubmit={handleSubmit} className="w-full mx-auto px-4 lg:px-6 2xl:px-8 space-y-8">
 
         {/* Submitted By*/}
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
